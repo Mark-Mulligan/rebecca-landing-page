@@ -2,7 +2,11 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
+import { useState } from 'react';
 
+import { slide as Menu } from 'react-burger-menu';
+
+import logo from '../images/logoCropped.png';
 import baby from '../images/baby.png';
 import becca from '../images/becca.jpg';
 import baby1 from '../images/baby1.png';
@@ -12,6 +16,8 @@ import baby3 from '../images/baby3.png';
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
       <Head>
@@ -21,9 +27,34 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <Menu right>
+          <ul>
+            <li>
+              <a id="home" className="menu-item" href="#consultation">
+                Consultation
+              </a>
+            </li>
+            <li>
+              <a id="about" className="menu-item" href="#about">
+                About
+              </a>
+            </li>
+            <li>
+              <a id="about" className="menu-item" href="#about">
+                Services
+              </a>
+            </li>
+            <li>
+              <a id="contact" className="menu-item" href="#contact">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </Menu>
+
         <section className="heroSection">
           <div className="logoWrapper">
-            <Image className="logo" src="/logoCroppedNoBackground.png" alt="logo" width={300} height={300} />
+            <img className="logo" src={logo.src} alt="logo" />
           </div>
 
           <h1>Loving Lactation</h1>
@@ -62,9 +93,7 @@ export default function Home() {
             </p>
 
             <div className="beccaContainer">
-              <img className="becca" src={becca.src} alt="Rebecca Loving" />
-
-              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                   dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -79,6 +108,7 @@ export default function Home() {
                   dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                 </p>
               </div>
+              <img className="becca" src={becca.src} alt="Rebecca Loving" />
             </div>
           </div>
         </section>
@@ -109,7 +139,34 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section className="additionalDetails">
+          <h2>Additional Details</h2>
+          <ul style={{ maxWidth: 800, margin: 'auto' }}>
+            <li className="detailsCard" style={{ background: '#CABAB1' }}>
+              <h4>Payment</h4>
+              <p>
+                Payment is due at the apponitment. You may use your Flexible or Health Spending Account, debit/credit
+                card, check or cash. A superbill will be provided to submit to your insurance copany for reimbursement.
+                Insurane reimbursement is not guaranteed but most companies provide lactation services
+              </p>
+            </li>
+            <li className="detailsCard" style={{ background: '#FAE7DC' }}>
+              <h4>Cancellation Policy</h4>
+              <p>If possible, please call, text or email within 24 hours if you need to reschedule or cancel.</p>
+            </li>
+            <li className="detailsCard" style={{ background: '#F4ECE0' }}>
+              <h4>Contact Information</h4>
+              <p>Rebecca Loving, RN, BSN, IBCLC</p>
+              <p>Lactation Consultant</p>
+              <p>Address Line 1</p>
+              <p>Address Line 2</p>
+              <p>Phone number</p>
+              <p>Email</p>
+            </li>
+          </ul>
+        </section>
       </main>
+      <footer style={{ textAlign: 'center', padding: '1rem' }}>(C) 2023 Loving Lactation LLC</footer>
     </>
   );
 }

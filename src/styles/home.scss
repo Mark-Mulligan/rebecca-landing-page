@@ -10,15 +10,15 @@ $primary-800: #b8aba4;
   .logoWrapper {
     text-align: center;
   }
+}
 
-  h1 {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    font-size: 6rem;
-    font-family: 'Sacramento', cursive;
-    font-weight: 300;
-  }
+h1 {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  font-size: 6rem;
+  font-family: 'Sacramento', cursive;
+  font-weight: 300;
 }
 
 .bookingSection {
@@ -36,27 +36,27 @@ $primary-800: #b8aba4;
       opacity: 0.5;
       display: block;
     }
+  }
+}
 
-    .bookBtnWrapper {
-      width: 100%;
-      text-align: center;
-      position: absolute;
-      bottom: 0;
-      transform: translateY(50%);
+.bookBtnWrapper {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
 
-      .bookBtn {
-        font-family: 'Sacramento', cursive;
-        background: $primary-800;
-        border: none;
-        font-size: 2.5rem;
-        padding: 0.6rem 2rem;
-        border-radius: 9999px;
-        cursor: pointer;
+  .bookBtn {
+    font-family: 'Sacramento', cursive;
+    background: $primary-800;
+    border: none;
+    font-size: 2.5rem;
+    padding: 0.6rem 2rem;
+    border-radius: 9999px;
+    cursor: pointer;
 
-        &:hover {
-          filter: brightness(1.2);
-        }
-      }
+    &:hover {
+      filter: brightness(1.2);
     }
   }
 }
@@ -70,6 +70,8 @@ $primary-800: #b8aba4;
     max-width: 800px;
     margin: auto;
     text-align: center;
+    padding-right: 15px;
+    padding-left: 15px;
 
     h2 {
       margin-bottom: 2rem;
@@ -77,12 +79,12 @@ $primary-800: #b8aba4;
 
     ul {
       list-style: none;
+    }
 
-      li {
-        font-size: 1.2rem;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-      }
+    li {
+      font-size: 1.2rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
     }
   }
 }
@@ -99,7 +101,7 @@ $primary-800: #b8aba4;
   h2 {
     text-align: center;
     background: #fae7dc;
-    padding: 1rem;
+    padding: 1rem 15px;
   }
 
   p {
@@ -108,7 +110,8 @@ $primary-800: #b8aba4;
   }
 
   .beccaContainer {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
 
     p {
       padding-top: 0px;
@@ -117,6 +120,7 @@ $primary-800: #b8aba4;
     .becca {
       height: auto;
       max-width: 300px;
+      width: 300px;
     }
   }
 }
@@ -140,7 +144,7 @@ $primary-800: #b8aba4;
 
     .babyCard {
       position: relative;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
 
       img {
         width: 100%;
@@ -162,8 +166,107 @@ $primary-800: #b8aba4;
           color: white;
           font-weight: 100;
           font-size: 3rem;
+          padding-left: 15px;
+          padding-right: 15px;
         }
       }
     }
+  }
+}
+
+.additionalDetails {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .detailsCard {
+    padding: 2rem;
+    margin-bottom: 2rem;
+
+    h4 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .heroSection {
+    padding-bottom: 4rem;
+
+    .logo {
+      width: 200px;
+      height: auto;
+    }
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .aboutSection {
+    .beccaContainer {
+      grid-template-columns: minmax(0, 1fr);
+      flex-wrap: wrap-reverse;
+
+      .becca {
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+
+  .ourServicesSection {
+    .ourServices {
+      .babyCard {
+        .titleWrapper {
+          h4 {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .heroSection {
+    padding-bottom: 3rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .bookingSection {
+    padding: 3rem;
+  }
+
+  .bookBtnWrapper {
+    .bookBtn {
+      font-size: 1.7rem;
+    }
+  }
+
+  .lactationServicesSection {
+    .lactationServicesContainer {
+      li {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .bookingSection {
+    padding: 1.5rem;
   }
 }
