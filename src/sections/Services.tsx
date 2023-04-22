@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 // images
 import baby1 from '../images/baby1.png';
 import baby2 from '../images/baby2.png';
-import baby3 from '../images/baby3.png';
+import baby3 from '../images/baby3.jpg';
 
 // styles
 import styles from '../styles/sections/Services.module.scss';

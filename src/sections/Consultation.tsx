@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 // images
-import baby from '../images/baby.png';
+import baby from '../images/baby.jpg';
 
 // styles
 import styles from '../styles/sections/Consultation.module.scss';
