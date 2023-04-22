@@ -13,7 +13,6 @@ $primary-800: #b8aba4;
       max-width: 800px;
       margin: auto;
       height: auto;
-      // opacity: 0.5;
       display: block;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
@@ -35,6 +34,7 @@ $primary-800: #b8aba4;
     padding: 0.6rem 2rem;
     border-radius: 9999px;
     cursor: pointer;
+    color: black;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
     &:hover {
