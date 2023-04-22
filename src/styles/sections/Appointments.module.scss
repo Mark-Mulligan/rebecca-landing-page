@@ -118,17 +118,3 @@
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
 }
-
-@media (max-width: 500px) {
-  .imageContainer {
-    .imageWrapper {
-      .babyFeet {
-        // transform: translate(-15px, 15px);
-      }
-    }
-
-    .background1 {
-      // transform: translate(15px, -15px);
-    }
-  }
-}
