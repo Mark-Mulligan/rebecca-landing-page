@@ -1,0 +1,62 @@
+$primary: #f4ece0;
+$primary-800: #b8aba4;
+
+.consultationSection {
+  padding: 5rem;
+  text-align: center;
+
+  .babyImgWrapper {
+    position: relative;
+
+    .babyImg {
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+      height: auto;
+      // opacity: 0.5;
+      display: block;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+  }
+}
+
+.bookBtnWrapper {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+
+  .bookBtn {
+    font-family: 'Sacramento', cursive;
+    background: $primary-800;
+    border: none;
+    font-size: 2.5rem;
+    padding: 0.6rem 2rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    &:hover {
+      filter: brightness(1.2);
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .consultationSection {
+    padding: 3rem;
+  }
+
+  .bookBtnWrapper {
+    .bookBtn {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .bookingSection {
+    padding: 1.5rem;
+  }
+}

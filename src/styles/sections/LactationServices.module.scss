@@ -1,0 +1,42 @@
+$primary: #f4ece0;
+$primary-800: #b8aba4;
+
+.lactationServicesSection {
+  background: $primary;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  .lactationServicesContainer {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      font-size: 1.2rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .lactationServicesSection {
+    .lactationServicesContainer {
+      li {
+        font-size: 1rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+      }
+    }
+  }
+}

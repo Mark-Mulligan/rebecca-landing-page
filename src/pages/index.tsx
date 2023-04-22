@@ -2,16 +2,17 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
-import { slide as Menu } from 'react-burger-menu';
+// Sections
+import AdditionalDetails from '@/sections/AdditionalDetails';
+import Services from '@/sections/Services';
+import About from '@/sections/About';
+import Consultation from '@/sections/Consultation';
+import LactationServices from '@/sections/LactationServices';
+import Appointments from '@/sections/Appointments';
 
 import logo from '../images/logoCropped.png';
-import baby from '../images/baby.png';
-import becca from '../images/becca.jpg';
-import baby1 from '../images/baby1.png';
-import baby2 from '../images/baby2.png';
-import baby3 from '../images/baby3.png';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -27,30 +28,35 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Menu right>
+        <div className={`hamburger-menu ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
+          <div className="bar-top"></div>
+          <div className="bar-middle"></div>
+          <div className="bar-bottom"></div>
+        </div>
+        <nav className={`navMenu ${menuOpen ? 'open' : ''}`}>
           <ul>
             <li>
-              <a id="home" className="menu-item" href="#consultation">
+              <a className="menu-item" href="#consultation" onClick={() => setMenuOpen(false)}>
                 Consultation
               </a>
             </li>
             <li>
-              <a id="about" className="menu-item" href="#about">
+              <a className="menu-item" href="#about" onClick={() => setMenuOpen(false)}>
                 About
               </a>
             </li>
             <li>
-              <a id="about" className="menu-item" href="#about">
+              <a className="menu-item" href="#services" onClick={() => setMenuOpen(false)}>
                 Services
               </a>
             </li>
             <li>
-              <a id="contact" className="menu-item" href="#contact">
+              <a className="menu-item" href="#contact" onClick={() => setMenuOpen(false)}>
                 Contact
               </a>
             </li>
           </ul>
-        </Menu>
+        </nav>
 
         <section className="heroSection">
           <div className="logoWrapper">
@@ -59,114 +65,17 @@ export default function Home() {
 
           <h1>Loving Lactation</h1>
         </section>
-        <section className="bookingSection">
-          <div className="babyImgWrapper">
-            <img src={baby.src} alt="baby" className="babyImg" />
-            <div className="bookBtnWrapper">
-              <button className="bookBtn">Book a Consultation</button>
-            </div>
-          </div>
-        </section>
-        <section className="lactationServicesSection">
-          <div className="lactationServicesContainer">
-            <h2>Lactation services may help with</h2>
-            <ul>
-              <li>Painful breastfeeding</li>
-              <li>Low milk supply</li>
-              <li>Oversupply or overactive letdown</li>
-              <li>Baby&apos;s slow weight gain or weight loss</li>
-              <li>Assess tongue and lip ties</li>
-              <li>Nipple damage</li>
-              <li>Pumping and flange sizing </li>
-            </ul>
-          </div>
-        </section>
-        <section className="aboutSection">
-          <div className="aboutContainer">
-            <h2>About Rebecca Loving, IBCLC</h2>
 
-            <p>
-              Mrs. Loving is a professional lactation consultant, certified by the International Board of Lactation
-              Consultant Examiners. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris.
-            </p>
-
-            <div className="beccaContainer">
-              <div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur amet, consectetur adipiscing elit, sed do eiusmod{' '}
-                </p>
-                <p>
-                  Mrs. Loving is a professional lactation consultant, certified by the International Board of Lactation
-                  Consultant Examiners. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  ullamco laboris. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                </p>
-              </div>
-              <img className="becca" src={becca.src} alt="Rebecca Loving" />
-            </div>
-          </div>
-        </section>
-
-        <section className="ourServicesSection">
-          <div className="ourServices">
-            <h2>Our Services</h2>
-
-            <div className="babyCard">
-              <img src={baby1.src} alt="baby1" />
-              <div className="titleWrapper">
-                <h4>Initial Consultation</h4>
-              </div>
-            </div>
-
-            <div className="babyCard">
-              <img src={baby2.src} alt="baby1" />
-              <div className="titleWrapper">
-                <h4>Follow Up Consultation</h4>
-              </div>
-            </div>
-
-            <div className="babyCard">
-              <img src={baby3.src} alt="baby1" />
-              <div className="titleWrapper">
-                <h4>Back to Work Consultation</h4>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="additionalDetails">
-          <h2>Additional Details</h2>
-          <ul style={{ maxWidth: 800, margin: 'auto' }}>
-            <li className="detailsCard" style={{ background: '#CABAB1' }}>
-              <h4>Payment</h4>
-              <p>
-                Payment is due at the apponitment. You may use your Flexible or Health Spending Account, debit/credit
-                card, check or cash. A superbill will be provided to submit to your insurance copany for reimbursement.
-                Insurane reimbursement is not guaranteed but most companies provide lactation services
-              </p>
-            </li>
-            <li className="detailsCard" style={{ background: '#FAE7DC' }}>
-              <h4>Cancellation Policy</h4>
-              <p>If possible, please call, text or email within 24 hours if you need to reschedule or cancel.</p>
-            </li>
-            <li className="detailsCard" style={{ background: '#F4ECE0' }}>
-              <h4>Contact Information</h4>
-              <p>Rebecca Loving, RN, BSN, IBCLC</p>
-              <p>Lactation Consultant</p>
-              <p>Address Line 1</p>
-              <p>Address Line 2</p>
-              <p>Phone number</p>
-              <p>Email</p>
-            </li>
-          </ul>
-        </section>
+        <Consultation />
+        <LactationServices />
+        <About />
+        <Services />
+        <Appointments />
+        <AdditionalDetails />
       </main>
-      <footer style={{ textAlign: 'center', padding: '1rem' }}>(C) 2023 Loving Lactation LLC</footer>
+      <footer style={{ textAlign: 'center', padding: '1rem', background: '#F4ECE0' }}>
+        (C) 2023 Loving Lactation LLC
+      </footer>
     </>
   );
 }

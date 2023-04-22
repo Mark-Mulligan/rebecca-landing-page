@@ -1,0 +1,79 @@
+$primary: #f4ece0;
+$primary-800: #b8aba4;
+
+.ourServicesSection {
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+  background: $primary;
+
+  .ourServices {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    min-height: 700px;
+    padding-top: 1rem;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.babyCard {
+  position: relative;
+  margin-bottom: 2rem;
+
+  &:hover {
+    img {
+      filter: brightness(1);
+      transition: 0.3s all;
+      transform: scale(0.95);
+    }
+  }
+
+  img {
+    width: 100%;
+    filter: brightness(0.8);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  .titleWrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    cursor: pointer;
+
+    h4 {
+      position: absolute;
+      color: white;
+      font-weight: 100;
+      font-size: 2.5rem;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .babyCard {
+    .titleWrapper {
+      h4 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .ourServicesSection {
+    padding-bottom: 0;
+  }
+
+  .babyCard:last-child {
+    margin-bottom: 0;
+  }
+}

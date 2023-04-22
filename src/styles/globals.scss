@@ -26,6 +26,10 @@ h2 {
   font-size: 2.5rem;
 }
 
+h4 {
+  font-size: 2rem;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -41,88 +45,134 @@ li {
   h2 {
     font-size: 2rem;
   }
+
+  h4 {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 520px) {
   h2 {
     font-size: 1.8rem;
   }
+
+  h4 {
+    font-size: 1.6rem;
+  }
 }
 
-/* Position and sizing of burger button */
-.bm-burger-button {
+.bar-top,
+.bar-middle,
+.bar-bottom {
+  height: 4px;
+  background: black;
+  border-radius: 5px;
+  margin: 3px 0;
+  transform-origin: left;
+  transition: all 0.5s;
+}
+
+.hamburger-menu {
   position: fixed;
-  width: 36px;
-  height: 30px;
-  right: 36px;
-  top: 36px;
-}
+  top: 15px;
+  right: 15px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+  z-index: 101;
 
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  background: #373a47;
-}
+  &:hover {
+    .bar-top {
+      background: #a83939;
+    }
 
-/* Color/shape of burger icon bars on hover*/
-.bm-burger-bars-hover {
-  background: #a90000;
-}
+    .bar-middle {
+      background: #a83939;
+    }
 
-/* Position and sizing of clickable cross button */
-.bm-cross-button {
-  height: 24px;
-  width: 24px;
-}
-
-/* Color/shape of close button cross */
-.bm-cross {
-  background: #bdc3c7;
-}
-
-/*
-Sidebar wrapper styles
-Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-*/
-.bm-menu-wrap {
-  position: fixed;
-  height: 100%;
-}
-
-/* General sidebar styles */
-.bm-menu {
-  background: #373a47;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
-
-  a {
-    width: 100%;
-    display: inline-block;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-
-    &:hover {
-      color: white;
+    .bar-bottom {
+      background: #a83939;
     }
   }
 }
 
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-  fill: #373a47;
+@media (max-width: 800px) {
+  .bar-top,
+  .bar-middle,
+  .bar-bottom {
+    height: 3px;
+  }
+
+  .hamburger-menu {
+    height: 2rem;
+    width: 2rem;
+  }
 }
 
-/* Wrapper for item list */
-.bm-item-list {
-  color: #b8b7ad;
-  padding: 0.8em;
+.hamburger-menu.open .bar-top {
+  transform: rotate(45deg);
+}
+.hamburger-menu.open .bar-middle {
+  transform: translateX(1rem);
+  opacity: 0;
+}
+.hamburger-menu.open .bar-bottom {
+  transform: rotate(-45deg);
 }
 
-/* Individual item */
-.bm-item {
-  display: inline-block;
+.hamburger-menu.open {
+  .bar-top {
+    background: #b8b7ad;
+  }
+
+  .bar-bottom {
+    background: #b8b7ad;
+  }
+
+  &:hover {
+    .bar-top {
+      background: white;
+    }
+
+    .bar-bottom {
+      background: white;
+    }
+  }
 }
 
-/* Styling of overlay */
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
+.navMenu {
+  background: #373a47;
+  position: fixed;
+  height: 100%;
+  z-index: 100;
+  right: 0;
+  width: 0;
+  padding-top: 3.5rem;
+  overflow: hidden;
+  transition: all 0.5s;
+
+  ul {
+    li {
+      a {
+        display: inline-block;
+        padding: 1rem;
+        color: #b8b7ad;
+        width: 100%;
+        font-size: 1.2rem;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.navMenu.open {
+  width: 300px;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }

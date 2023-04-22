@@ -1,0 +1,134 @@
+.appointments {
+  padding-top: 5rem;
+  padding-bottom: 7rem;
+
+  .appointmentsContainer {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  h2 {
+    text-align: center;
+    background: #fae7dc;
+    padding: 1rem 15px;
+    margin-bottom: 3rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  .detailsCard {
+    padding: 2.2rem;
+    margin-bottom: 3rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    h4 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+  }
+}
+
+.appointmentPrep {
+  padding: 2.2rem;
+  position: relative;
+  margin-bottom: 3rem;
+
+  .outerBox1 {
+    position: absolute;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    border: 6px solid #b8aba4;
+    top: 0;
+    left: 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  .outerBox2 {
+    position: absolute;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    border: 6px solid #e7c0a3;
+    top: 15px;
+    left: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  h4 {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 30px;
+    margin-bottom: 1rem;
+
+    li {
+      padding: 0.5rem 5px;
+    }
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+}
+
+.imageContainer {
+  text-align: center;
+  margin-top: 5rem;
+
+  .imageWrapper {
+    display: inline-block;
+    position: relative;
+    margin-left: 25px;
+    margin-right: 25px;
+
+    .babyFeet {
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+      // transform: translate(-25px, 25px);
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+  }
+
+  .background1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #f4ece0;
+    top: 0;
+    left: 0;
+    // transform: translate(25px, -25px);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  .background2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #dacebf;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+}
+
+@media (max-width: 500px) {
+  .imageContainer {
+    .imageWrapper {
+      .babyFeet {
+        // transform: translate(-15px, 15px);
+      }
+    }
+
+    .background1 {
+      // transform: translate(15px, -15px);
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.aboutSection {
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+
+  .aboutContainer {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  h2 {
+    text-align: center;
+    background: #fae7dc;
+    padding: 1rem 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  p {
+    line-height: 1.5;
+    padding: 15px;
+  }
+
+  .beccaContainer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+
+    p {
+      padding-top: 0px;
+    }
+
+    .becca {
+      height: auto;
+      max-width: 300px;
+      width: 300px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .aboutSection {
+    .beccaContainer {
+      grid-template-columns: minmax(0, 1fr);
+      flex-wrap: wrap-reverse;
+
+      .becca {
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+}
