@@ -42,7 +42,7 @@ const Appointments = () => {
           }}
           className={styles.detailsCard}
         >
-          <h4>What I Will Do for You</h4>
+          <h3>What I Will Do for You</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
@@ -61,7 +61,7 @@ const Appointments = () => {
         >
           <div className={styles.outerBox1} />
           <div className={styles.outerBox2} />
-          <h4>Preparing For Your Appointment</h4>
+          <h3>Preparing For Your Appointment</h3>
           <ul>
             <li>Consent Form</li>
             <li>Intake History</li>
@@ -81,7 +81,7 @@ const Appointments = () => {
           }}
           className={styles.detailsCard}
         >
-          <h4>Appointment Availability</h4>
+          <h3>Appointment Availability</h3>
           <p>Available office days, times - i.e. Monday 8:00 am - 5:00 pm</p>
           <p>View Calendar</p>
         </div>

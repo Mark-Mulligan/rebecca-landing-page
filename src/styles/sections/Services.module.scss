@@ -25,7 +25,7 @@ $primary-800: #b8aba4;
 
   &:hover {
     .img {
-      filter: brightness(0.85);
+      filter: brightness(1);
       transition: 0.3s all;
     }
   }
@@ -33,7 +33,7 @@ $primary-800: #b8aba4;
   .img {
     width: 100%;
     height: auto;
-    filter: brightness(0.65);
+    filter: brightness(0.8);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
 
@@ -47,13 +47,16 @@ $primary-800: #b8aba4;
     top: 0;
     cursor: pointer;
 
-    h4 {
+    h3 {
       position: absolute;
       color: white;
       font-weight: 400;
       font-size: 2.5rem;
       padding-left: 15px;
       padding-right: 15px;
+      padding: 15px;
+      border-radius: 5px;
+      background: rgba(0, 0, 0, 0.4);
     }
   }
 }
@@ -61,7 +64,7 @@ $primary-800: #b8aba4;
 @media (max-width: 800px) {
   .babyCard {
     .titleWrapper {
-      h4 {
+      h3 {
         font-size: 2rem;
       }
     }

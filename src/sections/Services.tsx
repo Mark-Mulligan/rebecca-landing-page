@@ -29,59 +29,59 @@ const Services = () => {
       <div className={styles.ourServices}>
         <h2>Our Services</h2>
 
-        <div className={styles.babyCard}>
-          <Image
-            src={baby1}
-            alt="baby1"
-            ref={imgRef1}
-            className={styles.img}
-            style={{
-              transform: img1InView ? 'scale(1)' : 'scale(0.9)',
-              opacity: img1InView ? 1 : 0,
-              transition: 'all 0.6s',
-            }}
-          />
+        <ul>
+          <li className={styles.babyCard}>
+            <Image
+              src={baby1}
+              alt="baby1"
+              ref={imgRef1}
+              className={styles.img}
+              style={{
+                transform: img1InView ? 'scale(1)' : 'scale(0.9)',
+                opacity: img1InView ? 1 : 0,
+                transition: 'all 0.6s',
+              }}
+            />
 
-          <div className={styles.titleWrapper}>
-            <h4>Initial Consultation</h4>
-          </div>
-        </div>
+            <div className={styles.titleWrapper}>
+              <h3>Initial Consultation</h3>
+            </div>
+          </li>
+          <li className={styles.babyCard}>
+            <Image
+              src={baby2}
+              alt="baby2"
+              ref={imgRef2}
+              className={styles.img}
+              style={{
+                transform: img2InView ? 'scale(1)' : 'scale(0.9)',
+                opacity: img2InView ? 1 : 0,
+                transition: 'all 0.6s',
+              }}
+            />
 
-        <div className={styles.babyCard}>
-          <Image
-            src={baby2}
-            alt="baby2"
-            ref={imgRef2}
-            className={styles.img}
-            style={{
-              transform: img2InView ? 'scale(1)' : 'scale(0.9)',
-              opacity: img2InView ? 1 : 0,
-              transition: 'all 0.6s',
-            }}
-          />
+            <div className={styles.titleWrapper}>
+              <h3>Follow Up Consultation</h3>
+            </div>
+          </li>
+          <li className={styles.babyCard}>
+            <Image
+              src={baby3}
+              alt="baby3"
+              ref={imgRef3}
+              className={styles.img}
+              style={{
+                transform: img3InView ? 'scale(1)' : 'scale(0.9)',
+                opacity: img3InView ? 1 : 0,
+                transition: 'all 0.6s',
+              }}
+            />
 
-          <div className={styles.titleWrapper}>
-            <h4>Follow Up Consultation</h4>
-          </div>
-        </div>
-
-        <div className={styles.babyCard}>
-          <Image
-            src={baby3}
-            alt="baby3"
-            ref={imgRef3}
-            className={styles.img}
-            style={{
-              transform: img3InView ? 'scale(1)' : 'scale(0.9)',
-              opacity: img3InView ? 1 : 0,
-              transition: 'all 0.6s',
-            }}
-          />
-
-          <div className={styles.titleWrapper}>
-            <h4>Back to Work Consultation</h4>
-          </div>
-        </div>
+            <div className={styles.titleWrapper}>
+              <h3>Back to Work Consultation</h3>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
   );

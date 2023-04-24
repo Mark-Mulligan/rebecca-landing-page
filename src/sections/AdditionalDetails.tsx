@@ -29,7 +29,7 @@ const AdditionalDetails = () => {
           }}
           className={styles.detailsCard}
         >
-          <h4>Payment</h4>
+          <h3>Payment</h3>
           <p>
             Payment is due at the apponitment. You may use your Flexible or Health Spending Account, debit/credit card,
             check or cash. A superbill will be provided to submit to your insurance copany for reimbursement. Insurane
@@ -45,7 +45,7 @@ const AdditionalDetails = () => {
           }}
           className={styles.detailsCard}
         >
-          <h4>Cancellation Policy</h4>
+          <h3>Cancellation Policy</h3>
           <p>If possible, please call, text or email within 24 hours if you need to reschedule or cancel.</p>
         </li>
         <li
@@ -58,7 +58,7 @@ const AdditionalDetails = () => {
           className={styles.detailsCard}
           id="contact"
         >
-          <h4>Contact Information</h4>
+          <h3>Contact Information</h3>
           <p>Rebecca Loving, RN, BSN, IBCLC</p>
           <p>Lactation Consultant</p>
           <p>Address Line 1</p>
