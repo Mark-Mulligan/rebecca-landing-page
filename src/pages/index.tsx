@@ -78,7 +78,7 @@ export default function Home() {
 
         <section className="heroSection">
           <div className="logoWrapper">
-            <img className="logo" src={logo.src} alt="logo" />
+            <Image className="logo" src={logo} alt="logo" priority />
           </div>
 
           <h1>Loving Lactation</h1>

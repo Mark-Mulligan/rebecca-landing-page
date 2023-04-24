@@ -19,7 +19,7 @@ const Consultation = () => {
         transition={{ duration: 0.6 }}
         className={styles.babyImgWrapper}
       >
-        <Image src={baby} alt="baby" className={styles.babyImg} id="consultation" />
+        <Image src={baby} alt="baby" className={styles.babyImg} id="consultation" priority placeholder="blur" />
 
         <div className={styles.bookBtnWrapper}>
           <motion.button
