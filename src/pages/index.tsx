@@ -92,7 +92,7 @@ export default function Home() {
         <AdditionalDetails />
       </main>
       <footer style={{ textAlign: 'center', padding: '1rem', background: '#F4ECE0' }}>
-        (C) 2023 Loving Lactation LLC
+        &copy; 2023 Loving Lactation LLC
       </footer>
     </>
   );
