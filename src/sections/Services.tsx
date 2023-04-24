@@ -8,9 +8,9 @@ import Image from 'next/image';
 import { useInView } from 'framer-motion';
 
 // images
-import baby1 from '../images/baby1.png';
-import baby2 from '../images/baby2.png';
-import baby3 from '../images/baby3.jpg';
+import baby1 from '../images/baby1.webp';
+import baby2 from '../images/baby2.webp';
+import baby3 from '../images/baby3.webp';
 
 // styles
 import styles from '../styles/sections/Services.module.scss';

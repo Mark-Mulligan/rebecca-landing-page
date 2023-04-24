@@ -8,7 +8,7 @@ import Image from 'next/image';
 import { useInView } from 'framer-motion';
 
 // images
-import becca from '../images/becca.jpg';
+import becca from '../images/becca.webp';
 
 // styles
 import styles from '../styles/sections/About.module.scss';

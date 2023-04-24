@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 // images
-import baby from '../images/baby.jpg';
+import baby from '../images/baby.webp';
 
 // styles
 import styles from '../styles/sections/Consultation.module.scss';

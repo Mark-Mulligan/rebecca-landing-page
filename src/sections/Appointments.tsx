@@ -8,7 +8,7 @@ import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 
 // images
-import babyFeet from '../images/baby-feet.jpeg';
+import babyFeet from '../images/baby-feet.webp';
 
 // styles
 import styles from '../styles/sections/Appointments.module.scss';

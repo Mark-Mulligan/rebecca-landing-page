@@ -12,7 +12,7 @@ import Consultation from '@/sections/Consultation';
 import LactationServices from '@/sections/LactationServices';
 import Appointments from '@/sections/Appointments';
 
-import logo from '../images/logoCropped.png';
+import logo from '../images/logoCropped.webp';
 
 const inter = Inter({ subsets: ['latin'] });
 
