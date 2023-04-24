@@ -1,22 +1,7 @@
-// @font-face {
-//   font-family: 'SecondaryFont';
-//   src: url('./fonts/PolygonParty-3KXM.ttf') format('opentype');
-// }
-
-@font-face {
-  font-family: 'MainFont';
-  src: url('../fonts/Raleway-VariableFont_wght.ttf') format('opentype');
-}
-
-@font-face {
-  font-family: 'CustomCursiveFont';
-  src: url('../fonts/OoohBaby-Regular.ttf') format('opentype');
-}
-
 :root {
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono', 'Oxygen Mono',
     'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-  font-family: MainFont, Verdana, sans-serif;
+  font-family: 'Raleway', Verdana, sans-serif;
 }
 
 * {
