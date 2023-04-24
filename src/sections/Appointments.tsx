@@ -1,5 +1,11 @@
+// react
+import { useRef } from 'react';
+
+// Next
+import Image from 'next/image';
+
 // framer-motion
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 
 // images
 import babyFeet from '../images/baby-feet.jpeg';
@@ -8,6 +14,10 @@ import babyFeet from '../images/baby-feet.jpeg';
 import styles from '../styles/sections/Appointments.module.scss';
 
 const Appointments = () => {
+  const imgRef = useRef<HTMLImageElement | null>(null);
+
+  const imgInView = useInView(imgRef);
+
   return (
     <section id="appointments" className={styles.appointments}>
       <div className={styles.appointmentsContainer}>
@@ -74,13 +84,16 @@ const Appointments = () => {
               transition={{ duration: 0.75 }}
               className={styles.background2}
             />
-            <motion.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1, x: -25, y: 25 }}
-              transition={{ duration: 0.75 }}
-              className={styles.babyFeet}
-              src={babyFeet.src}
+            <Image
+              src={babyFeet}
               alt="baby feet"
+              ref={imgRef}
+              className={styles.babyFeet}
+              style={{
+                transform: imgInView ? 'translate(-25px, 25px)' : 'none',
+                opacity: imgInView ? 1 : 0,
+                transition: 'all 0.75s',
+              }}
             />
           </div>
         </div>

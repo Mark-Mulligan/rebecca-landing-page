@@ -24,15 +24,15 @@ $primary-800: #b8aba4;
   margin-bottom: 2rem;
 
   &:hover {
-    img {
+    .img {
       filter: brightness(0.85);
       transition: 0.3s all;
     }
   }
 
-  img {
+  .img {
     width: 100%;
-
+    height: auto;
     filter: brightness(0.65);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }

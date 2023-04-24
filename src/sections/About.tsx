@@ -1,8 +1,11 @@
 // React
 import { useRef } from 'react';
 
+// next
+import Image from 'next/image';
+
 // framer-motion
-import { motion, useInView } from 'framer-motion';
+import { useInView } from 'framer-motion';
 
 // images
 import becca from '../images/becca.jpg';
@@ -14,10 +17,12 @@ const About = () => {
   const p1Ref = useRef<HTMLParagraphElement | null>(null);
   const p2Ref = useRef<HTMLParagraphElement | null>(null);
   const p3Ref = useRef<HTMLParagraphElement | null>(null);
+  const imgRef = useRef<HTMLImageElement | null>(null);
 
   const p1InView = useInView(p1Ref, { once: true });
   const p2InView = useInView(p2Ref, { once: true });
   const p3InView = useInView(p3Ref, { once: true });
+  const imgInView = useInView(imgRef);
 
   return (
     <section className={styles.aboutSection} id="about">
@@ -68,13 +73,15 @@ const About = () => {
               aliqua. Ut enim ad minim veniam, quis nostrud exercitation
             </p>
           </div>
-          <motion.img
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            className={styles.becca}
-            src={becca.src}
+          <Image
+            src={becca}
             alt="Rebecca Loving"
+            ref={imgRef}
+            className={styles.becca}
+            style={{
+              opacity: imgInView ? 1 : 0,
+              transition: 'all 0.6s',
+            }}
           />
         </div>
       </div>
